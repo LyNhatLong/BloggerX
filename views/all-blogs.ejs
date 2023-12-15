@@ -1,0 +1,17 @@
+<%-include("partials/header")  %> 
+
+<div class="container">
+    <h1>All Blogs</h1>
+    
+    <ul class="all-blogs">
+        <% for(x = blogs.length-1; x >= 0; x--){ %> 
+        <li class="blog">
+            <h2><%= blogs[x].title %> </h2>
+            <p><%= blogs[x].content %></p>
+            <p>SharedBy: <b><%= blogs[x].sharedBy %></b></p>
+            <button class="read-btn"><a href="/blog/<%= blogs[x]._id %> ">Read the Blog</a></button>
+        </li>
+    
+        <% } %> 
+    </ul>
+</div>

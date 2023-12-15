@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog của tôi</title> <!-- Sửa title thành "Blog của tôi" -->
+    <style>
+     h1,h2,h3,h4,h5,label,input,a,li,ul{
+    font-family: "tahoma";
+    color: #444;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+form{
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 2px 20px #aaa;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+form h2{
+    text-transform: uppercase;
+}
+
+input{
+    width: 100%;
+    padding: 7px 0;
+}
+
+label{
+    display: block;
+    margin-top: 20px;
+}
+
+form button{
+    margin-top: 20px;
+    border: none;
+    background: #aaa;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+}
+
+
+.all-blogs{
+    width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.blog{
+    box-shadow: 0 2px 20px #ccc;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 50px;
+    margin-bottom: 50px;
+}
+
+.read-btn, .read-btn a{
+    border: none;
+    background: #777;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.edit-btn, .edit-btn a{
+    border: none;
+    background: rgb(3, 175, 242);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.delete-btn, .delete-btn a{
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.container{
+    text-align: center;
+}
+
+.container h1{
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.container-readblog{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+    </style>
+</head>
+<body>
+    
+
+    <nav>
+        <h1><a href="/">Nhật Long Blogs</a></h1>
+        <ul>
+            <% if(user) { %>
+            <li><a href="/all-blogs">All Blogs</a></li>
+            <li><a href="/Your-blogs">Your Blogs</a></li>
+            <li><a href="/share-blog">Share blog</a></li>
+            <li><a href="/logout">Logout</a></li>
+
+            <% } else { %>
+            <li><a href="/all-blogs">All Blogs</a></li>
+            <li><a href="/share-blog">Share blog</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/login">Login</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</body>
+</html>

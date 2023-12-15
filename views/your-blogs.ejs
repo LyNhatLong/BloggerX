@@ -1,0 +1,17 @@
+<%-include("partials/header")  %> 
+
+<div class="container">
+    <h1>Your Blogs</h1>
+
+
+    <ul class="all-blogs">
+        <% for(x = blogs.length-1; x >= 0; x--){ %>
+            <li class="blog">
+                <h2><%= blogs[x].title %> </h2>
+                <p><%= blogs[x].content %> </p>
+                <button class="edit-btn"><a href="/edit/<%= blogs[x]._id %> ">Edit</a></button>
+                <button class="delete-btn"><a href="/delete/<%= blogs[x]._id %> ">Delete</a></button>
+            </li>
+        <% } %> 
+    </ul>
+</div>
